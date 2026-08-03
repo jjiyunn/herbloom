@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+
+.gr-btn {
+	display: inline-block; margin: 0 auto; padding: 15px 20px;  text-align: center;
+	border: 2px solid #333; border-radius: 25px;
+}
+
+.gr-oh-btn {
+	position: absolute; color: #f6f6f6;
+	border: 2px solid #f6f6f6;
+}
+
+
+
+/*===== FHD =====*/
+@media screen and (min-width: 1600px) {
+
+	.gr-bn-bg {
+		background: url('../imgs/growing/fhd-gr-bn-bg.jpg') no-repeat center;
+		background-size: cover;
+	}
+
+
+	/*===== container =====*/
+	.gr-hc-wrap, .gr-ih-wrap, .gr-oh-wrap { display: flex; justify-content: space-between; }
+
+
+	/*===== Herb Cultivation =====*/
+	.gr-hc-wrap > div { display: flex; width: 750px; }
+	.gr-hc-reverse { flex-direction: row-reverse; }
+	.gr-hc-bg { width: 90%; height: 390px; }
+	.gr-hc-bg1 { background: url('../imgs/growing/fhd-gr-hc-bg1.jpg') no-repeat center center; }
+	.gr-hc-bg2 { background: url('../imgs/growing/fhd-gr-hc-bg2.jpg') no-repeat center center; }
+	.gr-hc-cts { padding: 60px; text-align: center; background: #eee; }
+	.gr-hc-cts p { padding-top: 60px; }
+	.gr-hc-cts a { margin-top: 90px; }
+
+
+
+	/*===== Indoor Herbs =====*/
+	.gr-ih-wrap { justify-content: center; }
+	.gr-ih-wrap > div {
+		width: 400px; margin: 0 25px; text-align: center;
+		background: #eee; border-radius: 20px; overflow: hidden;
+	}
+	.gr-ih-bg { height: 300px; }
+	.gr-ih-bg h4 { padding-top: 220px; color: #f6f6f6; }
+	.gr-ih-bg1 { background: url('../imgs/growing/fhd-gr-ih-bg1.jpg') no-repeat; }
+	.gr-ih-bg2 { background: url('../imgs/growing/fhd-gr-ih-bg2.jpg') no-repeat; }
+	.gr-ih-bg3 { background: url('../imgs/growing/fhd-gr-ih-bg3.jpg') no-repeat; }
+	.gr-ih-cts { padding: 50px; }
+	.gr-ih-cts a { margin-top: 40px; }
+
+
+
+	/*===== Outdoor Herbs =====*/
+	.gr-oh-wrap { flex-wrap: wrap; }
+	.gr-oh-wrap > div {
+		width: 770px; height: 470px; margin-bottom: 10px;
+		color: #f6f6f6;
+	}
+	.gr-oh-bg1 { background: url('../imgs/growing/fhd-gr-oh-bg1.jpg') no-repeat; }
+	.gr-oh-bg2 { background: url('../imgs/growing/fhd-gr-oh-bg2.jpg') no-repeat; }
+	.gr-oh-bg3 { background: url('../imgs/growing/fhd-gr-oh-bg3.jpg') no-repeat; }
+	.gr-oh-bg4 { background: url('../imgs/growing/fhd-gr-oh-bg4.jpg') no-repeat; }
+	.gr-oh-item {
+		position: relative;
+		margin-top: 140px; padding: 50px 60px; text-align: right;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.gr-oh-item p { padding-top: 5px; }
+	.gr-oh-bg2 .gr-oh-item, .gr-oh-bg4 .gr-oh-item { text-align: left; }
+	.gr-oh-btn { top: 50%; transform: translateY(-50%); }
+	.gr-oh-bg1 .gr-oh-btn, .gr-oh-bg3 .gr-oh-btn { left: 50px; }
+	.gr-oh-bg2 .gr-oh-btn, .gr-oh-bg4 .gr-oh-btn { right: 50px; }
+
+}
+
+
+
+/*===== HD =====*/
+@media screen and (min-width:1150px) and (max-width:1599px) {
+
+	.gr-bn-bg {
+		background: url('../imgs/growing/hd-gr-bn-bg.jpg') no-repeat center;
+		background-size: cover;
+	}
+
+
+
+	/*===== Herb Cultivation =====*/
+	.gr-hc-wrap { display: flex; justify-content: space-between; }
+	.gr-hc-wrap > div { display: flex; width: 530px; }
+	.gr-hc-reverse { flex-direction: row-reverse; }
+	.gr-hc-bg { width: 200px; height: 370px; }
+	.gr-hc-bg1 { background: url('../imgs/growing/hd-gr-hc-bg1.jpg') no-repeat center center; }
+	.gr-hc-bg2 { background: url('../imgs/growing/hd-gr-hc-bg2.jpg') no-repeat center center; }
+	.gr-hc-cts { width: 330px; padding: 40px; text-align: center; background: #eee; }
+	.gr-hc-cts p { padding-top: 60px; }
+	.gr-hc-cts a { margin-top: 90px; }
+
+
+
+	/*===== Indoor Herbs =====*/
+	.gr-ih-wrap { display: flex; justify-content: space-between; }
+	.gr-ih-wrap > div {
+		width: 350px; text-align: center;
+		background: #eee; border-radius: 20px; overflow: hidden;
+	}
+	.gr-ih-bg { height: 300px; }
+	.gr-ih-bg h4 { padding-top: 220px; color: #f6f6f6; }
+	.gr-ih-bg1 { background: url('../imgs/growing/hd-gr-ih-bg1.jpg') no-repeat; }
+	.gr-ih-bg2 { background: url('../imgs/growing/hd-gr-ih-bg2.jpg') no-repeat; }
+	.gr-ih-bg3 { background: url('../imgs/growing/hd-gr-ih-bg3.jpg') no-repeat; }
+	.gr-ih-cts { padding: 40px; }
+	.gr-ih-cts a { margin-top: 40px; }
+
+
+
+	/*===== Outdoor Herbs =====*/
+	.gr-oh-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; }
+	.gr-oh-wrap > div {
+		width: 545px; height: 350px; margin-bottom: 10px;
+		color: #f6f6f6;
+	}
+	.gr-oh-bg1 { background: url('../imgs/growing/hd-gr-oh-bg1.jpg') no-repeat; }
+	.gr-oh-bg2 { background: url('../imgs/growing/hd-gr-oh-bg2.jpg') no-repeat; }
+	.gr-oh-bg3 { background: url('../imgs/growing/hd-gr-oh-bg3.jpg') no-repeat; }
+	.gr-oh-bg4 { background: url('../imgs/growing/hd-gr-oh-bg4.jpg') no-repeat; }
+	.gr-oh-item {
+		position: relative; display: flex; justify-content: center;
+		margin-top: 100px; padding: 40px 60px;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.gr-oh-item p { width: 250px; margin-left: 40px; }
+	
+	.gr-oh-btn { left: 50%; top: 150px; transform: translateX(-50%); }
+
+}
+
+
+
+/*===== TB =====*/
+@media screen and (min-width:765px) and (max-width:1149px) {
+	
+	.gr-bn-bg {
+		background: url('../imgs/growing/tb-gr-bn-bg.jpg') no-repeat center;
+		background-size: cover;
+	}
+
+
+
+	/*===== Herb Cultivation =====*/
+	.gr-hc-wrap { display: flex; justify-content: space-between; }
+	.gr-hc-wrap > div { width: 360px; }
+	.gr-hc-bg { height: 140px; }
+	.gr-hc-bg1 { background: url('../imgs/growing/tb-gr-hc-bg1.jpg') no-repeat center center; }
+	.gr-hc-bg2 { background: url('../imgs/growing/tb-gr-hc-bg2.jpg') no-repeat center center; }
+	.gr-hc-cts { padding: 40px; text-align: center; background: #eee; }
+	.gr-hc-cts p { padding-top: 30px; }
+	.gr-hc-cts a { margin-top: 50px; }
+
+
+
+	/*===== Indoor Herbs =====*/
+	.gr-ih-wrap { display: flex; justify-content: space-between; }
+	.gr-ih-wrap > div {
+		width: 360px; text-align: center;
+		background: #eee; border-radius: 20px; overflow: hidden;
+	}
+	.gr-ih-wrap > div:nth-child(3) { display: none; }
+	.gr-ih-bg { height: 200px; }
+	.gr-ih-bg h4 { padding-top: 140px; color: #f6f6f6; }
+	.gr-ih-bg1 { background: url('../imgs/growing/tb-gr-ih-bg1.jpg') no-repeat; }
+	.gr-ih-bg2 { background: url('../imgs/growing/tb-gr-ih-bg2.jpg') no-repeat; }
+	.gr-ih-bg3 { background: url('../imgs/growing/tb-gr-ih-bg3.jpg') no-repeat; }
+	.gr-ih-cts { padding: 40px; }
+	.gr-ih-cts a { margin-top: 40px; }
+
+
+
+	/*===== Outdoor Herbs =====*/
+	.gr-oh-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; }
+	.gr-oh-wrap > div {
+		width: 360px; height: 400px; margin-bottom: 10px;
+		color: #f6f6f6;
+	}
+	.gr-oh-bg1 {
+		background: url('../imgs/growing/tb-gr-oh-bg1.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-bg2 {
+		background: url('../imgs/growing/tb-gr-oh-bg2.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-bg3 {
+		background: url('../imgs/growing/tb-gr-oh-bg3.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-bg4 {
+		background: url('../imgs/growing/tb-gr-oh-bg4.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-item {
+		position: relative;
+		width: 100%; margin-top: 50px; padding: 50px; text-align: center;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.gr-oh-item p { padding-top: 20px; }
+	.gr-oh-btn { left: 50%; top: 255px; transform: translateX(-50%); }
+}
+
+
+
+/* SM */
+@media screen and (max-width: 767px) {
+
+    .gr-bn-bg {
+		background: url('../imgs/growing/sm-gr-bn-bg.jpg') no-repeat center;
+		background-size: cover;
+	}
+
+
+
+	/*===== Herb Cultivation =====*/
+	.gr-hc-bg { height: 170px; }
+	.gr-hc-bg1 { background: url('../imgs/growing/sm-gr-hc-bg1.jpg') no-repeat center center; }
+	.gr-hc-bg2 { background: url('../imgs/growing/sm-gr-hc-bg2.jpg') no-repeat center center; }
+	.gr-hc-cts { margin-bottom: 10px; padding: 30px; text-align: center; background: #eee; }
+	.gr-hc-cts p { padding-top: 30px; }
+	.gr-hc-cts a { margin-top: 40px; }
+
+
+
+	/*===== Indoor Herbs =====*/
+	.gr-ih-wrap > div {
+		width: 350px; margin-bottom: 10px; text-align: center;
+		background: #eee; border-radius: 20px; overflow: hidden;
+	}
+	.gr-ih-bg { height: 200px; }
+	.gr-ih-bg h4 { padding-top: 120px; color: #f6f6f6; }
+	.gr-ih-bg1 { background: url('../imgs/growing/sm-gr-ih-bg1.jpg') no-repeat; }
+	.gr-ih-bg2 { background: url('../imgs/growing/sm-gr-ih-bg2.jpg') no-repeat; }
+	.gr-ih-bg3 { background: url('../imgs/growing/sm-gr-ih-bg3.jpg') no-repeat; }
+	.gr-ih-cts { padding: 40px; }
+	.gr-ih-cts a { margin-top: 40px; }
+
+
+
+	/*===== Outdoor Herbs =====*/
+	.gr-oh-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; }
+	.gr-oh-wrap > div {
+		width: 360px; height: 400px; margin-bottom: 10px;
+		color: #f6f6f6;
+	}
+	.gr-oh-bg1 {
+		background: url('../imgs/growing/sm-gr-oh-bg1.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-bg2 {
+		background: url('../imgs/growing/sm-gr-oh-bg2.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-bg3 {
+		background: url('../imgs/growing/sm-gr-oh-bg3.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-bg4 {
+		background: url('../imgs/growing/sm-gr-oh-bg4.jpg') no-repeat center center;
+		background-size: cover;
+	}
+	.gr-oh-item {
+		position: relative;
+		width: 100%; margin-top: 50px; padding: 50px; text-align: center;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.gr-oh-item p { padding-top: 20px; }
+	.gr-oh-btn { left: 50%; top: 255px; transform: translateX(-50%); }
+}

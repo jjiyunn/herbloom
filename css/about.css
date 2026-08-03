@@ -1,0 +1,569 @@
+@charset "utf-8";
+
+
+@media screen and (min-width: 1600px) {
+    
+    /* ===== banner ===== */
+    .ab-bn-bg {
+        background: url('../imgs/about/fhd-ab-bn-bg.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .bn-cts { 
+        position: fixed; left: 50%; top: 270px;
+        transform: translateX(-50%); pointer-events: none;
+    }
+    .bn-cts > * { opacity: 0; transition: all 0.3s ease; }
+
+
+
+    /* ===== Making Herbs Simple ===== */
+    .ab-mhs-container {
+        position: relative;
+        height: 100vh; color: #f6f6f6; text-align: center;
+        background: url('../imgs/about/fhd-ab-mhs-wrap.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .ab-mhs-cts { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); }
+    .ab-mhs-cts h3 span { color: #749a5e; }
+    .ab-mhs-cts p { font-size: 16px; }
+    .ab-mhs-cts p:nth-of-type(1) { font-family: "Pretendard-Bold";  margin-top: 10px; }
+    .ab-mhs-cts p:nth-of-type(2)  { margin: 130px auto 0; }
+    .ab-mhs-btn {
+        width: 170px; margin: 50px auto; padding: 20px 0; color: #f6f6f6;
+        border: 1.2px solid #f6f6f6; background: rgba(255, 255, 255, 0.1);
+        border-radius: 30px; font-size: 16px; transition: all 0.2s ease-in;
+    }
+    .ab-mhs-btn:hover {
+        transform: translateY(-3px); background: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.1); 
+    }
+    .bi-chevron-right { display: none;}
+
+
+
+    /* ===== Why Herbloom ===== */
+    .ab-wh-wrap, .ab-whb-wrap { 
+        display: flex; justify-content: space-between;
+        opacity:0; transform:translateY(50px); transition: all 0.8s ease-in; overflow: hidden;
+    }
+    .ab-wh-wrap.show, .ab-whb-wrap.show { opacity:1; transform:translateY(0); }
+
+    .ab-wh-bg {
+        width: 180px; height: 525px; margin-top: 250px;
+        transition: background-size 0.4s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg1 {
+        background: url('../imgs/about/fhd-ab-wh-bg1.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-bg2 {
+        margin-left: 25px;
+        background: url('../imgs/about/fhd-ab-wh-bg2.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-cts { width: 250px; margin: 650px 150px 0 50px; }
+    .ab-wh-cts h4 { font-family: 'Pretendard-SemiBold'; color: #333;}
+    .ab-wh-cts > p { margin-top: 20px; word-break: keep-all;  line-height: 20px;}
+    .ab-wh-wrap > p { height: 330px; margin-right: 40px; writing-mode: vertical-rl; line-height: 22px; }
+    .ab-wh-bg3 {
+        width: 570px; height: 775px;
+        background: url('../imgs/about/fhd-ab-wh-bg3.jpg') no-repeat center center;
+        background-size: 100%; transition: background-size 0.4s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg:hover, .ab-wh-bg3:hover { background-size: 110%; }
+
+
+    .ab-whb-wrap { margin-top: 60px; transition-delay: 0.1s;}
+    .ab-whb-wrap > div { height: 280px; }
+    .ab-wh-bg4 {
+        width: 775px;
+        background: url('../imgs/about/fhd-ab-wh-bg4.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .ab-wh-bg5 {
+        width: 350px; margin-left: 40px;
+        background: url('../imgs/about/fhd-ab-wh-bg5.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .ab-wh-bg6 {
+        width: 230px; margin-left: 30px;
+        background: url('../imgs/about/fhd-ab-wh-bg6.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .ab-wh-bg7 {
+        width: 63px; margin-left: 20px;
+        background: url('../imgs/about/fhd-ab-wh-bg7.jpg') no-repeat center center;
+        background-size: cover; 
+    }
+    .ab-wh-bg8 {
+        width: 24px; margin-left: 10px;
+        background: url('../imgs/about/fhd-ab-wh-bg8.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+
+
+
+    /* ===== Our Philosophy ===== */
+    .ab-op-wrap {
+        display: flex; justify-content: center; align-items: center;
+        height: 620px; 
+        background: url('../imgs/about/fhd-ab-op.jpg') no-repeat center center ; 
+        background-size: cover;
+    }
+    .ab-op-wrap > div {
+        width: 340px; height: 380px; margin: 0 51px; opacity: 0;
+        border: 2px solid #f6f6f6; border-radius: 50px; background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); text-align: center;
+        transition: 0.6s ease; transform: translateY(-60px);
+    }
+    .ab-op-wrap > div.show { opacity: 0.8; transform: translateY(0); }
+    .ab-op-wrap > div:hover { 
+        transform: translateY(-8px); background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transform: scale(1.02);
+    }
+    .ab-op-wrap > div:hover svg { transform: scale(1.12);}
+    .ab-op-wrap > div > svg { 
+        width: 44px; height: 44px; color: #f6f6f6; margin-top: 66px;
+        transition: all 0.3s ease-in;
+    }
+    .ab-op-wrap h4, .ab-op-wrap p, .ab-op-wrap .ab-op-btn {color: #f6f6f6;}
+    .ab-op-wrap h4 { margin-top: 31px; font-family: 'Pretendard-SemiBold'; }
+    .ab-op-wrap p { width: 160px; margin: 14px auto 0; line-height: 20px;
+    text-align: center; word-break:keep-all;}
+
+    .ab-op-btn {
+        display: flex; align-items: center; justify-content: center;
+        width: 90px; height: 40px; font-weight: 400; margin: 35px auto 0;
+        border: 1.2px solid #f6f6f6; border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1); gap:2px;
+        transition: all 0.2s ease-in;
+    }
+    .ab-op-btn:hover { background: #f6f6f6; color: #333; }
+    .ab-op-btn:hover .arrow { transform: translateX(4px);}
+    .ab-op-btn span { padding-left: 9px; }
+    .ab-op-wrap svg.arrow { 
+        width: 20px; height: 20px; margin-top: 0; transition: all 0.2s ease-in; }
+    .bi.bi-plus {display: none;}
+}
+
+
+
+
+
+
+/* ========================= HD ========================= */
+
+
+@media screen  and (min-width: 1150px) and (max-width: 1599px) {
+    
+    /* ===== banner ===== */
+    .ab-bn-bg {
+        background: url('../imgs/about/fhd-ab-bn-bg.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .bn-cts { 
+        position: fixed; left: 50%; top: 50%;
+        transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .bn-cts > * { opacity: 0; transition: all 0.3s ease; }
+
+
+
+    /* ===== Making Herbs Simple ===== */
+    .ab-mhs-container {
+        position: relative;
+        height: 100vh; color: #f6f6f6; text-align: center;
+        background: url('../imgs/about/fhd-ab-mhs-wrap.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .ab-mhs-cts { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); }
+    .ab-mhs-cts h3 { padding-top: 30px; }
+    .ab-mhs-cts h3 span { color: #749a5e; }
+    .ab-mhs-cts p { font-size: 16px; }
+    .ab-mhs-cts p:nth-of-type(1) { font-family: "Pretendard-Bold";  margin-top: 10px; }
+    .ab-mhs-cts p:nth-of-type(2)  { margin: 130px auto 0; }
+    .ab-mhs-btn {
+        width: 170px; margin: 50px auto; padding: 20px 0; color: #f6f6f6;
+        border: 1.2px solid #f6f6f6; background: rgba(255, 255, 255, 0.1);
+        border-radius: 30px; font-size: 16px; transition: all 0.2s ease-in;
+    }
+    .ab-mhs-btn:hover {
+        transform: translateY(-3px); background: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.1); 
+    }
+    .bi-chevron-right { display: none; }
+
+
+
+    /* ===== Why Herbloom ===== */
+    .ab-wh-wrap { position: relative; }
+    .ab-wh-wrap, .ab-whb-wrap { 
+        display: flex;
+        opacity:0; transform:translateY(50px); transition: all 0.8s ease-in; overflow: hidden;
+    }
+    .ab-wh-wrap.show, .ab-whb-wrap.show { opacity:1; transform:translateY(0); }
+
+    .ab-wh-bg {
+        width: 147px; height: 387px;
+        transition: background-size 0.4s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg1 {
+        background: url('../imgs/about/hd-ab-wh-bg1.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-bg2 {
+        margin-left: 20px;
+        background: url('../imgs/about/hd-ab-wh-bg2.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-cts { position: absolute; width: 360px; margin-top: 505px; }
+    .ab-wh-cts h4 { font-family: 'Pretendard-SemiBold'; color: #333;}
+    .ab-wh-cts > p { margin-top: 20px; word-break: keep-all;  line-height: 20px;}
+    .ab-wh-wrap > p { height: 330px; margin-left: 260px; writing-mode: vertical-rl; line-height: 22px; }
+    .ab-wh-bg3 {
+        margin-left: auto; width: 449px; height: 608px;
+        background: url('../imgs/about/hd-ab-wh-bg3.jpg') no-repeat center center;
+        background-size: 100%; transition: background-size 0.4s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg:hover, .ab-wh-bg3:hover { background-size: 110%; }
+
+
+    .ab-whb-wrap { margin-top: 45px; }
+    .ab-whb-wrap > div { height: 169px; }
+    .ab-wh-bg4 {
+        width: 775px;
+        background: url('../imgs/about/hd-ab-wh-bg4.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .ab-wh-bg5 {
+        width: 350px; margin-left: 30px;
+        background: url('../imgs/about/hd-ab-wh-bg5.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .ab-wh-bg6 {
+        width: 230px; margin-left: 20px;
+        background: url('../imgs/about/hd-ab-wh-bg6.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .ab-wh-bg7 {
+        width: 63px; margin-left: 14px;
+        background: url('../imgs/about/hd-ab-wh-bg7.jpg') no-repeat center center;
+        background-size: cover; 
+    }
+    .ab-wh-bg8 {
+        width: 24px; margin-left: 13px;
+        background: url('../imgs/about/hd-ab-wh-bg8.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+
+
+
+    /* ===== Our Philosophy ===== */
+    .ab-op-wrap {
+        display: flex; justify-content: center; align-items: center;
+        height: 620px; 
+        background: url('../imgs/about/fhd-ab-op.jpg') no-repeat center center ; 
+        background-size: cover;
+    }
+    .ab-op-wrap > div {
+        width: 320px; height: 370px; margin: 0 30px; opacity: 0;
+        border: 2px solid #f6f6f6; border-radius: 50px; background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); text-align: center;
+        transition: 0.6s ease; transform: translateY(-60px);
+    }
+    .ab-op-wrap > div.show { opacity: 0.8; transform: translateY(0); }
+    .ab-op-wrap > div:hover { 
+        transform: translateY(-8px); background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transform: scale(1.02);
+    }
+    .ab-op-wrap > div:hover svg { transform: scale(1.12);}
+    .ab-op-wrap > div > svg { 
+        width: 44px; height: 44px; color: #f6f6f6; margin-top: 66px;
+        transition: all 0.3s ease-in;
+    }
+    .ab-op-wrap h4, .ab-op-wrap p, .ab-op-wrap .ab-op-btn {color: #f6f6f6;}
+    .ab-op-wrap h4 { margin-top: 30px; font-family: 'Pretendard-SemiBold'; }
+    .ab-op-wrap p { width: 160px; margin: 14px auto 0; line-height: 18px;
+    text-align: center; word-break:keep-all;}
+
+    .ab-op-btn {
+        display: flex; align-items: center; justify-content: center;
+        width: 90px; height: 40px; font-weight: 400; margin: 35px auto 0;
+        border: 1.2px solid #f6f6f6; border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1); gap:2px;
+        transition: all 0.2s ease-in;
+    }
+    .ab-op-btn:hover { background: #f6f6f6; color: #333; }
+    .ab-op-btn:hover .arrow { transform: translateX(4px);}
+    .ab-op-btn span { padding-left: 9px; }
+    .ab-op-wrap svg.arrow { 
+        width: 20px; height: 20px; margin-top: 0; transition: all 0.2s ease-in; }
+    .bi.bi-plus {display: none;}
+}
+
+
+
+
+
+
+/* ========================= TB ========================= */
+
+
+@media screen  and (min-width: 768px) and (max-width: 1149px) {
+    /* ===== banner ===== */
+    .ab-bn-bg {
+        background: url('../imgs/about/tb-ab-bn-bg.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .bn-cts {
+        position: fixed; left: 50%; top: 50%;
+        transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .bn-cts > * { opacity: 0; transition: all 0.3s ease; }
+
+
+
+    /* ===== Making Herbs Simple ===== */
+    .ab-mhs-container {
+        position: relative;
+        height: 100vh; color: #f6f6f6; text-align: center;
+        background: url('../imgs/about/tb-ab-mhs-wrap.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .ab-mhs-cts { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+    .ab-mhs-cts h3 { padding-top: 20px; font-size: 36px; }
+    .ab-mhs-cts h3 span { color: #749a5e; font-size: 36px;}
+    .ab-mhs-cts p { font-size: 15px; }
+    .ab-mhs-cts p:nth-of-type(1) { font-family: "Pretendard-Bold";  margin-top: 10px; }
+    .ab-mhs-cts p:nth-of-type(2)  { margin: 130px auto 0; }
+    .ab-mhs-btn {
+        width: 150px; margin: 50px auto; padding: 20px 0; color: #f6f6f6;
+        border: 1.2px solid #f6f6f6; background: rgba(255, 255, 255, 0.1);
+        border-radius: 30px; font-size: 15px; transition: all 0.2s ease-in;
+    }
+    .ab-mhs-btn:hover {
+        transform: translateY(-3px); background: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.1); 
+    }
+    .bi-chevron-right { display: none;}
+
+
+
+    /* ===== Why Herbloom ===== */
+    .ab-wh-wrap  {
+        display: flex;  flex-wrap: wrap;
+        opacity:0; transform:translateY(50px); transition: all 0.8s ease-in; overflow: hidden;
+    }
+    .ab-whb-wrap { display: none; }
+    .ab-wh-wrap.show { opacity:1; transform:translateY(0); }
+    
+    .ab-wh-bg {
+        width: 365px; height: 155px;
+        transition: background-size 0.4s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg1 {
+        background: url('../imgs/about/tb-ab-wh-bg1.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-bg2 {
+        margin-left: 20px;
+        background: url('../imgs/about/tb-ab-wh-bg2.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-cts { text-align: center; width: 100%; }
+    .ab-wh-cts h4 { margin-top: 33px; font-family: 'Pretendard-SemiBold'; color: #333;}
+    .ab-wh-cts > p { width: 250px; margin: 12px auto 0; word-break: keep-all; line-height: 17px; font-size: 14px;}
+    .ab-wh-wrap > p { 
+        width: 250px; margin: 12px auto 0; text-align: center; 
+        word-break: keep-all; font-size: 14px;  line-height: 17px;
+    }
+    .ab-wh-bg3 {
+        width: 750px; height: 300px; margin-top: 33px;
+        background: url('../imgs/about/tb-ab-wh-bg3.jpg') no-repeat center center;
+        background-size: 100%; transition: all 0.4s ease-in; 
+        opacity:0; transform:translateY(50px);
+        overflow: hidden;
+    }
+    .ab-wh-bg3.show { opacity:1; transform:translateY(0); }
+    .ab-wh-bg:hover, .ab-wh-bg3:hover { background-size: 110%; }
+
+
+
+
+    /* ===== Our Philosophy ===== */
+    .ab-op-wrap {
+        display: flex; justify-content: center; align-items: center;
+        height: 480px; 
+        background: url('../imgs/about/tb-ab-op-wrap.jpg') no-repeat center center ; 
+        background-size: cover;
+    }
+    .ab-op-wrap > div {
+        width: 270px; height: 290px; margin: 0 15px; opacity: 0;
+        border: 2px solid #f6f6f6; border-radius: 50px; background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); text-align: center;
+        transition: 0.6s ease; transform: translateY(-60px);
+    }
+    .ab-op-wrap > div:nth-child(2) { display: none; }
+    .ab-op-wrap > div.show { opacity: 0.8; transform: translateY(0); }
+    .ab-op-wrap > div:hover { 
+        transform: translateY(-8px); background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transform: scale(1.02);
+    }
+    .ab-op-wrap > div:hover svg { transform: scale(1.12);}
+    .ab-op-wrap > div > svg { 
+        width: 35px; height: 35px; color: #f6f6f6; margin-top: 50px;
+        transition: all 0.3s ease-in;
+    }
+    .ab-op-wrap h4, .ab-op-wrap p, .ab-op-wrap .ab-op-btn {color: #f6f6f6;}
+    .ab-op-wrap h4 { margin-top: 23px; font-family: 'Pretendard-SemiBold'; }
+    .ab-op-wrap p { width: 150px; margin: 11px auto 0; line-height: 17px;
+    font-size: 14px; text-align: center; word-break:keep-all;}
+
+    .ab-op-btn {
+        display: flex; align-items: center; justify-content: center;
+        width: 38px; height: 38px; margin: 18px auto 0;
+        border: 1.2px solid #f6f6f6; border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1); 
+        transition: all 0.2s ease-in;
+    }
+    .ab-op-btn:hover { background: #f6f6f6; color: #333; }
+    .ab-op-btn:hover { transform: scale(1.08);}
+    .ab-op-btn span { display: none;}
+    .ab-op-wrap svg.arrow { display: none; }
+    .bi.bi-plus { display: block; font-size: 26px; }
+}
+
+
+
+
+/* ========================= SM ========================= */
+@media screen and (max-width: 767px) {
+/* ===== banner ===== */
+    .ab-bn-bg {
+        background: url('../imgs/about/sm-ab-bn-bg.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .bn-cts {
+        position: fixed; left: 50%; top: 50%;
+        transform: translate(-50%,-50%); pointer-events: none;
+    }
+    .bn-cts > * { opacity: 0; transition: all 0.3s ease; }
+    .bn-cts p span { display: none; }
+
+
+
+    /* ===== Making Herbs Simple ===== */
+    .ab-mhs-container {
+        position: relative;
+        height: 100vh; color: #f6f6f6; text-align: center;
+        background: url('../imgs/about/sm-ab-mhs-wrap.jpg') no-repeat center center;
+        background-size: cover; background-attachment: fixed;
+    }
+    .ab-mhs-cts { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+    .ab-mhs-cts h3 { padding-top: 20px; font-size: 30px; }
+    .ab-mhs-cts h3 span { color: #749a5e; font-size: 30px;}
+    .ab-mhs-cts p { font-size: 15px; }
+    .ab-mhs-cts p span { display: none; }
+    .ab-mhs-cts p:nth-of-type(1) { font-family: "Pretendard-Bold";  margin-top: 10px; }
+    .ab-mhs-cts p:nth-of-type(2)  { width:195px; margin: 80px auto 0; font-size: 14px; }
+    .ab-mhs-btn {
+        position: relative;
+        width: 44px; height: 44px; margin: 20px auto; color: #f6f6f6;
+        border: 1.2px solid #f6f6f6; background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%; transition: all 0.2s ease-in;
+    }
+    .ab-mhs-btn span { display: none; }
+    .ab-mhs-btn:hover {
+        transform: translateY(-3px); background: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.1); 
+    }
+    .bi-chevron-right {
+        position: absolute; display: block;
+        left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 18px;
+    }
+
+    /* ===== Why Herbloom ===== */
+    .ab-wh-wrap  {
+        height: 565px;
+        opacity:0; transform:translateY(50px); transition: all 0.8s ease-in; overflow: hidden;
+    }
+    .ab-whb-wrap { display: none; }
+    .ab-wh-wrap.show { opacity:1; transform:translateY(0); }
+    
+    .ab-wh-bg {
+        width: 350px; height: 100px;
+        transition: background-size 0.4s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg1 {
+        background: url('../imgs/about/sm-ab-wh-bg1.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    .ab-wh-bg2 {
+        margin-top: 10px;
+        background: url('../imgs/about/sm-ab-wh-bg2.jpg') no-repeat center center;
+        background-size: 100%; 
+    }
+    .ab-wh-cts { text-align: center; width: 100%; }
+    .ab-wh-cts h4 { margin-top: 20px; font-family: 'Pretendard-SemiBold'; color: #333;}
+    .ab-wh-cts > p { width: 250px; margin: 10px auto 0; word-break: keep-all; line-height: 17px; font-size: 14px;}
+    .ab-wh-wrap > p { 
+        width: 250px; margin: 10px auto 0 ; text-align: center; 
+        word-break: keep-all; font-size: 14px; line-height: 17px;
+    }
+    .ab-wh-bg3 {
+        width: 350px; height: 190px; margin-top: 20px;  
+        background: url('../imgs/about/sm-ab-wh-bg3.jpg') no-repeat center center;
+        opacity:0; transform:translateY(50px);
+        background-size: 100%; transition: all 0.3s ease-in; overflow: hidden;
+    }
+    .ab-wh-bg3.show { opacity:1; transform:translateY(0); }
+    .ab-wh-bg:hover, .ab-wh-bg3:hover { background-size: 110%; }
+
+
+
+
+    /* ===== Our Philosophy ===== */
+    .ab-op-wrap {
+        padding: 20px 0;
+        background: url('../imgs/about/sm-ab-op-wrap.jpg') no-repeat center center ; 
+        background-size: cover;
+    }
+    .ab-op-wrap > div {
+        width: 220px; height: 235px; margin: 20px auto; opacity: 0;
+        border: 2px solid #f6f6f6; border-radius: 50px; background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); text-align: center;
+        transition: 0.6s ease; transform: translateY(-60px);
+    }
+    .ab-op-wrap > div:nth-child(2) { display: block; }
+    .ab-op-wrap > div.show { opacity: 0.8; transform: translateY(0); }
+    .ab-op-wrap > div:hover { 
+        transform: translateY(-8px); background: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); transform: scale(1.02);
+    }
+    .ab-op-wrap > div:hover svg { transform: scale(1.12);}
+    .ab-op-wrap > div > svg { 
+        width: 33px; height: 33px; color: #f6f6f6; margin-top: 35px;
+        transition: all 0.3s ease-in;
+    }
+    .ab-op-wrap h4, .ab-op-wrap p, .ab-op-wrap .ab-op-btn {color: #f6f6f6;}
+    .ab-op-wrap h4 { margin-top: 18px; font-family: 'Pretendard-SemiBold'; }
+    .ab-op-wrap p { width: 110px; margin: 9px auto 0; line-height: 16px;
+    font-size: 14px; text-align: center; word-break:keep-all;}
+    .ab-op-wrap p span { display: none; }
+
+    .ab-op-btn {
+        display: flex; align-items: center; justify-content: center;
+        width: 34px; height: 34px; font-weight: 400; margin: 17px auto 0;
+        border: 1.2px solid #f6f6f6; border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1); gap:2px;
+        transition: all 0.2s ease-in;
+    }
+    .ab-op-btn:hover { background: #f6f6f6; color: #333; }
+    .ab-op-btn:hover { transform: scale(1.08);}
+    .ab-op-btn span { display: none;}
+    .ab-op-wrap svg.arrow { display: none; }
+    .bi.bi-plus { display: block; font-size: 26px; }
+}
+

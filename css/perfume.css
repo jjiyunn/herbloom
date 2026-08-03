@@ -1,0 +1,841 @@
+@charset "utf-8";
+
+
+body {
+  transition: 0.3s ease-in-out;
+}
+
+/* a:focus-visible {
+  outline: 2px solid #000; 
+  border-radius: 4px;
+  transition: all 0.2s;
+}  */
+
+.pf-bn-bg { background: url('../imgs/perfume/bn.webp') no-repeat center; }
+
+.pf-pm-wrap .sub-title, .pf-pe-wrap .sub-title { margin-top: 240px; }
+
+
+
+/* Herb Fragrance ====================== ====================== ====================== ====================== ====================== ====================== ======================*/
+.pf-hf-wrap {
+  position: relative; 
+  margin: 0 auto; 
+  width: 1200px;
+}
+.pf-hf-list {
+  position: relative;
+  width: 950px; height: 560px;
+}
+.swiper-slide {
+  position: relative;
+  display: flex;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.swiper-slide, .pf-hf-bg, .pf-hf-front {
+  width: 325px !important;
+  height: 520px;
+}
+
+.pf-hf-bg {
+  position: absolute;
+  top: 0; left: 0;
+  border-radius: 50px;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  clip-path: inset(0px 0px 0px 0px round 50px);
+}
+
+.pf-hf-bg-01 { background: url('../imgs/perfume/hf-bg-01.jpg') no-repeat center center; }
+.pf-hf-bg-02 { background: url('../imgs/perfume/hf-bg-02.jpg') no-repeat center center; }
+.pf-hf-bg-03 { background: url('../imgs/perfume/hf-bg-03.jpg') no-repeat center center; }
+.pf-hf-bg-04 { background: url('../imgs/perfume/hf-bg-04.jpg') no-repeat center center; }
+.pf-hf-bg-05 { background: url('../imgs/perfume/hf-bg-05.jpg') no-repeat center center; }
+
+/* 비활성 상태 */
+.swiper-slide:not(.swiper-slide-active) .pf-hf-bg {
+  top: 20px;
+  filter: brightness(0.6);
+  transform: scale(0.8);
+}
+/* 활성 상태 */
+.swiper-slide-active .pf-hf-bg {
+  clip-path: inset(50px 35px 215px 35px round 127.5px);
+  filter: brightness(1);
+  transform: scale(1);
+}
+.swiper-slide-active .pf-hf-back h4 {
+  opacity: 0;
+}
+
+
+
+.pf-hf-front {
+  position: absolute;
+  top: 0; left: 0;
+  border-radius: 65px;
+  box-shadow: 0 7px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: 0.5s;
+}
+.swiper-slide-active .pf-hf-front {
+  opacity: 1;
+}
+.pf-hf-front-01 { background: linear-gradient(#fff 60%,#f3d5d5 100%);}
+.pf-hf-front-02 { background: linear-gradient(#fff 60%,#c5dcbe 100%);}
+.pf-hf-front-03 { background: linear-gradient(#fff 60%,#ebdafe 100%);}
+.pf-hf-front-04 { background: linear-gradient(#fff 60%,#d1e7dd 100%);}
+.pf-hf-front-05 { background: linear-gradient(#fff 60%,#ede7ce 100%);}
+
+
+
+/* cts */
+.pf-hf-cts {
+  position: relative;
+  margin-top: 345px; 
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s 0.3s;
+  z-index: 5;
+}
+.swiper-slide-active .pf-hf-cts {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pf-hf-cts h4 {
+  font-family: 'Pretendard-Bold', sans-serif; 
+}
+.pf-hf-front-01 h4 { color: #af3333; }
+.pf-hf-front-02 h4 { color: #5f8f4f; }
+.pf-hf-front-03 h4 { color: #8e5ec1; }
+.pf-hf-front-04 h4 { color: #779337; }
+.pf-hf-front-05 h4 { color: #6b7342; }
+
+.pf-hf-cts p:nth-child(2) {
+  font-family: 'Pretendard-semiBold', sans-serif; 
+  font-size: 16px;
+  margin: 20px 0 13px; 
+}
+.pf-hf-back {
+  position: absolute;
+  width: 100%; height: 100%;
+  z-index: 1; /* cts(5)보다 높게 */
+}
+.pf-hf-back h4 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 150px;
+  color: rgba(246,246,246,0.8);
+  font-family: 'Pretendard-Bold', sans-serif; 
+  font-size: 24px;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+
+
+/* prev,next */
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 55% !important;
+  width: 50px !important; 
+  height: 95px !important;
+  cursor: pointer;
+}
+.swiper-button-prev { background: url('../imgs/perfume/fhd-hf-prev.png') no-repeat;}
+.swiper-button-next { background: url('../imgs/perfume/fhd-hf-next.png') no-repeat; }
+.swiper-button-next::after, .swiper-button-prev::after { display: none; }
+
+
+
+/* pagination */
+.swiper-pagination .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #5f8f4f;
+  width: 20px;
+  border-radius: 10px;
+}
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+
+
+/* HD */
+@media screen and (max-width:1599px) {
+
+
+  .pf-pm-wrap .sub-title, .pf-pe-wrap .sub-title { margin-top: 180px;}
+
+
+  .pf-hf-wrap {
+    width: 1100px;
+  }
+  .pf-hf-list {
+    width: 850px; height: 500px;
+  }
+
+  .swiper-slide, .pf-hf-bg, .pf-hf-front {
+    width: 292px !important; 
+    height: 468px;
+  }
+
+  /* 활성 상태 */
+  .swiper-slide-active .pf-hf-bg {
+    clip-path: inset(50px 30px 190px 30px round 115px);
+  }
+  .pf-hf-front {
+    border-radius: 60px;
+  }
+
+
+  /* cts */
+  .pf-hf-cts {
+    margin-top: 315px;
+  }
+  .pf-hf-cts p:nth-child(2) {
+    margin: 18px 0 12px; 
+  }
+  .pf-hf-back h4 {
+    font-size: 22px;
+    bottom: 110px;
+  }
+
+    
+  .swiper-pagination .swiper-pagination-bullet-active {
+    width: 16px;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    width: 45px !important; 
+    height: 86px !important;
+  }
+  .swiper-button-prev { background: url('../imgs/perfume/hd-hf-prev.png') no-repeat;}
+  .swiper-button-next { background: url('../imgs/perfume/hd-hf-next.png') no-repeat; }
+
+}
+
+
+
+/* TB */
+@media screen and (max-width:1149px) {
+  
+  .pf-pm-wrap .sub-title, .pf-pe-wrap .sub-title { margin-top: 132px;}
+
+
+  .pf-hf-wrap { width: 430px; }
+  .pf-hf-list {
+    width: 280px; height: 430px;
+  }
+  
+  .swiper-slide, .pf-hf-bg, .pf-hf-front {
+    width: 263px !important; height: 400px;
+  }
+
+  .pf-hf-bg {
+    border-radius: 45px;
+    clip-path: inset(0px 0px 0px 0px round 45px);
+  }
+
+  /* 활성 상태 */
+  .swiper-slide-active .pf-hf-bg {
+    clip-path: inset(35px 30px 160px 30px round 105px);
+  }
+  .pf-hf-front {
+    border-radius: 55px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+
+  /* cts */
+  .pf-hf-cts {
+    margin-top: 260px;
+  }
+  .pf-hf-cts p:nth-child(2) {
+    margin: 15px 0 10px; 
+    font-size: 15px;
+  }
+  .pf-hf-cts p:nth-child(3) {
+    font-size: 14px;
+  }
+  .pf-hf-back h4 {
+    display: none;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    width: 41px !important; height: 77px !important;
+  }
+  .swiper-button-prev { background: url('../imgs/perfume/tb-hf-prev.png') no-repeat;}
+  .swiper-button-next { background: url('../imgs/perfume/tb-hf-next.png') no-repeat; }
+
+}
+
+
+
+/* SM */
+@media screen and (max-width:767px) {
+
+  .pf-pm-wrap .sub-title, .pf-pe-wrap .sub-title { margin-top: 88px;}
+
+  .pf-hf-wrap { width: 340px; }
+  .pf-hf-list {
+    width: 220px; height: 340px;
+  }
+  .swiper-slide, .pf-hf-bg, .pf-hf-front {
+    width: 204px !important;
+    height: 313px;
+  }
+
+  .pf-hf-bg {
+    border-radius: 45px;
+    clip-path: inset(0px 0px 0px 0px round 45px);
+  }
+
+  /* 활성 상태 */
+  .swiper-slide-active .pf-hf-bg {
+    clip-path: inset(25px 25px 135px 25px round 105px);
+  }
+  .pf-hf-front {
+    border-radius: 50px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+  }
+
+
+  /* cts */
+  .pf-hf-cts {
+    margin-top: 200px;
+  }
+  .pf-hf-cts p:nth-child(2) {
+    margin: 10px 0 7px; 
+    font-size: 14px;
+  }
+  .pf-hf-cts p:nth-child(3) {
+    font-size: 13px;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 34px !important;
+    height: 66px !important;
+  }
+  .swiper-button-prev { background: url('../imgs/perfume/sm-hf-prev.png') no-repeat;}
+  .swiper-button-next { background: url('../imgs/perfume/sm-hf-next.png') no-repeat; }
+
+
+  /* pagination */
+  .swiper-pagination .swiper-pagination-bullet-active { width: 13px; }
+}
+
+
+
+
+/* Production Method ====================== ====================== ====================== ====================== ====================== ====================== ====================== */
+.pf-pm-list {
+  width: 1390px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.pf-pm-card, .pf-pm-Rcard {
+  position: relative;
+  width: 100%; height: 485px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+
+.pf-pm-cts { 
+  position: absolute; 
+  width: 650px; height: 420px;
+  left: 0; top: 35px;
+  padding: 60px;
+  background: #fbfbfb;
+  border-radius: 40px;
+}
+.pf-pm-cts *{ font-family: 'Pretendard-SemiBold', sans-serif; }
+.pf-pm-cts div:nth-child(1) {
+  width: 100px; height: 40px;
+  border: 2px solid #5f8f4f;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 38px;
+  color: #5f8f4f;
+}
+.pf-pm-cts h4 {
+  margin: 20px 0 25px;
+}
+.pf-pm-cts p {
+  width: 290px;
+  font-size: 16px;
+}
+.pf-pm-cts a {
+  width: 160px; height: 50px;
+  margin-top: 80px;
+  background: linear-gradient( 30deg, #eee6d4, #fff);
+  border-radius: 25px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3), 5px 0 5px rgba(0,0,0,0.1) inset;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+  transition: 0.4s;
+}
+.pf-pm-cts a i {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.pf-pm-cts div:last-child {
+  position: absolute;
+  width: 89px; height: 184px;
+  bottom: 10px; right: 190px;
+  background: url('../imgs/perfume/pm-icon-01.png');
+}
+
+.pf-pm-bg {
+  position: absolute;
+  top: 0;  right: 0;
+  width: 900px; height: 486px;
+  transition: 0.4s;
+}
+.pf-pm-bg-01 {
+  background: url('../imgs/perfume/fhd-pm-bg-01.png');
+}
+.pf-pm-bg-02 {
+  left: 0;
+  background: url('../imgs/perfume/fhd-pm-bg-02.png');
+}
+.pf-pm-bg-03 {
+  background: url('../imgs/perfume/fhd-pm-bg-03.png');
+}
+
+.pf-pm-card:hover .pf-pm-bg, .pf-pm-Rcard:hover .pf-pm-bg {
+  filter: drop-shadow(7px 7px 10px rgba(0,0,0,0.35));
+  transform: scale(1.02);
+}
+.pf-pm-card.active, .pf-pm-Rcard.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pf-pm-cts a:hover i {
+  transform: translateX(10px) scale(1.2); 
+}
+
+
+/* Rcard */
+.pf-pm-Rcard .pf-pm-cts {
+  left: auto; right: 0;
+  text-align: right;
+}
+.pf-pm-Rcard .pf-pm-cts div:nth-child(1) {
+  margin-left: auto;
+  border: 2px solid #5f8f4f;
+  color: #f6f6f6;
+  background: #5f8f4f;
+}
+.pf-pm-Rcard .pf-pm-cts a {
+  display: block; 
+  margin-left: auto;
+}
+.pf-pm-Rcard .pf-pm-cts p {
+  margin-left: auto;
+  text-align: right;
+}
+
+.pf-pm-Rcard .pf-pm-cts div:last-child {
+  width: 124px; height: 196px;
+  left: 180px;
+  background: url('../imgs/perfume/pm-icon-02.png');
+}
+.pf-pm-Rcard img {
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.pf-pm-list div:last-child .pf-pm-cts div:last-child{
+  width: 126px; height: 188px;
+  right: 200px;
+  background: url('../imgs/perfume/pm-icon-03.png');
+}
+
+
+
+/* HD */
+@media screen and (max-width:1599px) {
+  .pf-pm-list {
+    width: 1110px;
+    gap: 25px;
+  }
+  .pf-pm-card, .pf-pm-Rcard {
+    height: 385px;
+  }
+
+  .pf-pm-cts {
+    width: 515px; height: 333px;
+    top: 30px;
+    padding: 45px;
+    border-radius: 35px;
+  }
+  .pf-pm-cts div:nth-child(1) {
+    width: 85px; height: 34px;
+    line-height: 32px;
+    font-size: 14px;
+  }
+  .pf-pm-cts h4 {
+    margin: 15px 0 20px;
+  }
+  .pf-pm-cts p {
+    width: 280px;
+    font-size: 15px;
+  }
+  .pf-pm-cts a {
+    width: 140px; height: 44px;
+    margin-top: 60px;
+    font-size: 15px;
+    line-height: 44px;
+  }
+  .pf-pm-cts div:last-child {
+    width: 70px; height: 140px;
+    right: 130px;
+    background-size: cover;
+  }
+
+  .pf-pm-bg {
+    width: 711px; height: 384px;
+  }
+  .pf-pm-bg-01 {
+    background: url('../imgs/perfume/hd-pm-bg-01.png');
+  }
+  .pf-pm-bg-02 {
+    background: url('../imgs/perfume/hd-pm-bg-02.png');
+  }
+  .pf-pm-bg-03 {
+    background: url('../imgs/perfume/hd-pm-bg-03.png');
+  }
+
+
+  .pf-pm-Rcard .pf-pm-cts div:last-child { left: 130px; }
+  .pf-pm-list div:last-child .pf-pm-cts div:last-child{ right: 140px; }   
+
+  .pf-pm-Rcard .pf-pm-cts div:last-child, .pf-pm-list div:last-child .pf-pm-cts div:last-child {
+    width: 100px; height: 150px;
+    background-size: cover;
+  }
+}
+
+
+
+/* TB */
+@media screen and (max-width:1149px) {
+  .pf-pm-list {
+    width: 750px;
+    gap: 15px;
+  }
+  .pf-pm-card, .pf-pm-Rcard { height: 365px; }
+
+  .pf-pm-cts {
+    width: 500px; height: 323px;
+    top: 20px;
+  }
+  .pf-pm-cts div:nth-child(1) {
+    width: 80px; height: 32px;
+    line-height: 30px;
+  }
+  .pf-pm-cts a {
+    width: 130px; height: 41px;
+    margin-top: 55px;
+    line-height: 41px;
+    box-shadow: 2px 3px 7px rgba(0,0,0,0.4), 3px 0 3px rgba(0,0,0,0.1) inset;
+  }
+  .pf-pm-cts div:last-child {
+    width: 60px; height: 130px;
+    right: 140px;
+  }
+
+  .pf-pm-bg {
+    width: 364px; height: 364px;
+  }
+  .pf-pm-bg-01 {
+    background: url('../imgs/perfume/tb-pm-bg-01.png');
+  }
+  .pf-pm-bg-02 {
+    background: url('../imgs/perfume/tb-pm-bg-02.png');
+  }
+  .pf-pm-bg-03 {
+    background: url('../imgs/perfume/tb-pm-bg-03.png');
+  }
+
+  .pf-pm-card:hover .pf-pm-bg, .pf-pm-Rcard:hover .pf-pm-bg {
+    filter: drop-shadow(5px 5px 7px rgba(0,0,0,0.35));
+  }
+  .pf-pm-cts a:hover i {
+    transform: translateX(8px) scale(1.2); 
+  }
+
+  .pf-pm-Rcard .pf-pm-cts div:last-child { left: 150px; }
+  .pf-pm-list div:last-child .pf-pm-cts div:last-child{ right: 140px; }
+
+  .pf-pm-Rcard .pf-pm-cts div:last-child,
+  .pf-pm-list div:last-child .pf-pm-cts div:last-child {
+    width: 70px; height: 110px;
+    background-size: cover;
+  } 
+}
+
+
+
+/* SM */
+@media screen and (max-width: 767px) {
+  .pf-pm-list {
+    width: 340px;
+    gap: 20px;
+  }
+  .pf-pm-card, .pf-pm-Rcard {
+    height: 465px;
+  }
+
+  .pf-pm-cts {
+    width: 340px; height: 415px;
+    top: 50px;
+    padding: 215px 25px 30px;
+  }
+  .pf-pm-cts div:nth-child(1) {
+    height: 30px;
+    line-height: 28px;
+    font-size: 13px;
+  }
+  .pf-pm-cts h4 {
+    margin: 5px 0 10px;
+  }
+  .pf-pm-cts p {
+    width: 250px;
+    font-size: 14px;
+  }
+  .pf-pm-Rcard .pf-pm-cts p {
+    margin-left: auto;
+    text-align: right;
+  }
+  .pf-pm-cts a {
+    width: 130px; height: 41px;
+    margin-top: 25px;
+    line-height: 41px;
+    font-size: 14px;
+    box-shadow: 2px 3px 7px rgba(0,0,0,0.3), 3px 0 3px rgba(0,0,0,0.1) inset;
+  }
+  .pf-pm-cts div:last-child {
+    display: none;
+  }
+
+  .pf-pm-bg {
+    width: 302px; height: 269px;
+    left: auto; right: auto;
+    margin: 0 20px;
+  }
+  .pf-pm-bg-01 {
+    background: url('../imgs/perfume/sm-pm-bg-01.png');
+  }
+  .pf-pm-bg-02 {
+    background: url('../imgs/perfume/sm-pm-bg-02.png');
+  }
+  .pf-pm-bg-03 {
+    background: url('../imgs/perfume/sm-pm-bg-03.png');
+  }
+}
+
+
+
+/* Psychological Effects ====================== ====================== ====================== ====================== ====================== ====================== ====================== */
+.pf-pe-list {
+  display: flex;
+  width: 1300px; height: 715px;
+  margin: 0 auto;
+  gap: 4px;
+}
+.pf-pe-card {
+  position: relative;
+  width: 430px; height: 680px;
+  top: 35px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: top 0.8s ease-in-out 0.4s; 
+}
+
+.pf-pe-list > div:nth-child(2) { top: 0; }
+
+.pf-pe-list.active .pf-pe-card:nth-child(1),
+.pf-pe-list.active .pf-pe-card:nth-child(3) { top: 0; }
+.pf-pe-list.active .pf-pe-card:nth-child(2) { top: 35px; }
+
+
+.pf-pe-bg {
+  width: 100%; height: 100%;
+  background-repeat: no-repeat;
+  background-size: 1300px auto;
+  transition: background 0.4s ease; 
+}
+
+
+.pf-pe-bg-01 { 
+  border-radius: 35px 0 0 35px;
+  background: url('../imgs/perfume/pe-bg-01.webp') calc(50% + 434px) center;
+}
+.pf-pe-bg-02 {
+  background: url('../imgs/perfume/pe-bg-02.webp') center -71px;
+}
+.pf-pe-bg-03 { 
+  border-radius: 0 35px 35px 0;
+  background: url('../imgs/perfume/pe-bg-03.webp') calc(50% - 434px) center;
+}
+
+.pf-pe-list:has(.pf-pe-card:nth-child(1):hover) .pf-pe-bg {
+  background-image: url('../imgs/perfume/pe-bg-01.webp');
+}
+.pf-pe-list:has(.pf-pe-card:nth-child(2):hover) .pf-pe-bg {
+  background-image: url('../imgs/perfume/pe-bg-02.webp');
+}
+.pf-pe-list:has(.pf-pe-card:nth-child(3):hover) .pf-pe-bg {
+  background-image: url('../imgs/perfume/pe-bg-03.webp');
+}
+.pf-pe-list:has(.pf-pe-card:hover) .pf-pe-card:not(:hover) .pf-pe-cts {
+  opacity: 0;
+}
+
+.pf-pe-cts {
+  position: absolute;
+  left: 40px; bottom: 55px;
+  color: #f6f6f6;
+  pointer-events: none;
+  font-family: 'Pretendard-Bold', sans-serif;
+  transition: opacity 0.4s ease;
+  z-index: 9;
+}
+.pf-pe-cts p {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+
+
+/* HD */
+@media screen and (max-width:1599px) {
+  .pf-pe-list {
+    width: 1100px; height: 605px;
+  }
+  .pf-pe-card {
+    width: 363px; height: 575px;
+    top: 30px;
+  }
+
+  .pf-pe-list.active .pf-pe-card:nth-child(2) { top: 30px; }
+
+
+  .pf-pe-bg {
+    background-size: 1100px auto;
+  }
+  .pf-pe-bg-01 { 
+    background: url('../imgs/perfume/pe-bg-01.webp') calc(50% + 365px) -30px;
+  }
+  .pf-pe-bg-02 {
+    background: url('../imgs/perfume/pe-bg-02.webp') center -60px;
+  }
+  .pf-pe-bg-03 { 
+    background: url('../imgs/perfume/pe-bg-03.webp') calc(50% - 365px) -30px;
+  }
+
+
+  .pf-pe-cts {
+    left: 35px; bottom: 45px;
+  }
+  .pf-pe-cts p {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+
+
+
+/* TB */
+@media screen and (max-width:1149px) {
+  .pf-pe-list {
+    width: 750px;
+    gap: 3px;
+    flex-wrap: wrap;
+  }
+  .pf-pe-card {
+    width: 725px; height: 200px;
+    left: 25px; top: auto;
+    transition: left 0.7s ease-in-out; 
+  }
+
+  .pf-pe-list > div:nth-child(2) { left: 0; top: auto;}
+
+  .pf-pe-list.active .pf-pe-card:nth-child(1),
+  .pf-pe-list.active .pf-pe-card:nth-child(3) { left: 0; top: auto;}
+  .pf-pe-list.active .pf-pe-card:nth-child(2) { left: 25px; top: auto;}
+
+
+  .pf-pe-bg-01 { 
+    border-radius: 35px 35px 0 0;
+    background-position: center calc(50% + 205px);
+  }
+  .pf-pe-bg-02 { 
+    background-position: calc(50% - 25px) center; 
+  }
+  .pf-pe-bg-03 { 
+    border-radius: 0 0 35px 35px;
+    background-position: center calc(50% - 205px);
+  }
+
+
+  .pf-pe-cts {
+    left: 35px; bottom: 30px;
+  }
+  .pf-pe-cts p {
+    margin-top: 10px;
+  }
+}
+
+
+
+/* SM */
+@media screen and (max-width: 767px) {
+  .pf-pe-list {
+    width: 350px; height: 455px;
+  }
+  .pf-pe-card {
+    width: 340px; height: 150px;
+    left: 10px;
+  }
+
+  .pf-pe-list.active .pf-pe-card:nth-child(2) { left: 10px;}
+
+
+  .pf-pe-bg {
+    background-size: auto 455px;
+  }
+  .pf-pe-bg-01 { 
+    border-radius: 30px 30px 0 0;
+    background-position: center calc(50% + 152px);
+  }
+  .pf-pe-bg-02 { 
+    background-position: calc(50% - 10px) center; 
+  }
+  .pf-pe-bg-03 { 
+    border-radius: 0 0 30px 30px;
+    background-position: center calc(50% - 152px);
+  }
+
+
+  .pf-pe-cts {
+    left: 20px; bottom: 20px;
+  }
+  .pf-pe-cts p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
